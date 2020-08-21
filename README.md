@@ -13,3 +13,10 @@ bundle install
 ``` bash
 rake test
 ```
+
+### Run Algorithms
+
+#### Algorithm 2
+``` bash
+exe/algorithm2
+```

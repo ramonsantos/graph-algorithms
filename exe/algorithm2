@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require './lib/graph_algorithms'
+
+graph = [
+  [nil, 2, nil, nil, 3, nil, nil, nil],
+  [2, nil, nil, 8, nil, 9, 6, nil],
+  [nil, nil, nil, nil, nil, 3, 7, nil],
+  [nil, 8, nil, nil, nil, nil, nil, 6],
+  [3, nil, nil, nil, nil, nil, 5, 9],
+  [nil, 9, 3, nil, nil, nil, 4, 5],
+  [nil, 6, 7, nil, 5, 4, nil, nil],
+  [nil, nil, nil, 6, 9, 5, nil, nil]
+]
+
+results = GraphAlgorithms::Dijkstra.new.execute(graph)
+
+puts "Vertex,\tCost,\tPath"
+
+results.each do |result|
+  puts "#{result[:vertex]},\t#{result[:cost]},\t#{result[:path]}"
+end
