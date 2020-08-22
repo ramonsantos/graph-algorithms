@@ -14,9 +14,14 @@ bundle install
 rake test
 ```
 
-### Run Algorithms
+### Run Problems
 
-#### Algorithm 2
+#### Problem 1
+``` bash
+exe/algorithm1
+```
+
+#### Problem 2
 ``` bash
 exe/algorithm2
 ```
