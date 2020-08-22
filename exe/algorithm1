@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require './lib/graph_algorithms'
+
+graph = {
+  0 => Set.new([]),
+  1 => Set.new([]),
+  2 => Set.new([1]),
+  3 => Set.new([0]),
+  4 => Set.new([]),
+  5 => Set.new([3]),
+  6 => Set.new([2, 4, 5]),
+  7 => Set.new([5, 6])
+}
+
+results = GraphAlgorithms::Kahn.new.execute(graph)
+
+puts "Order of dependencies: #{results.to_a}"
